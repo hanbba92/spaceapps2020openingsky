@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>ENGLISH ZOOM MEETING</title>
+	<title>Opening Sky</title>
 	<link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="css/fixed.css">
@@ -27,10 +27,10 @@
 				<a class="nav-link" href="#home">Home</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#course">Today's Topic</a>
+				<a class="nav-link" href="#course">Challenge</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#portfolio">Past Topics</a>
+				<a class="nav-link" href="#portfolio">Project</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="#team">Members</a>
@@ -54,9 +54,7 @@
 		<!--- Slide1---->
 		<div class="carousel-item active" style="background-image: url(img/computers.png);">
 			<div class="carousel-caption text-center">
-				<h1>Welcome to English Zoom Meeting</h1>
-				<h3>9pm Aisa/Seoul Everyday</h3>
-				<a class="btn btn-outline-light btn-lg" href="https://sch-ac-kr.zoom.us/j/96606526156?pwd=cStnRll0aWtLb0dodVYvS3Y2NDJ6Zz09">Join Zoom</a>
+				<h1>Welcome to Opening Sky Teampage</h1>
 			</div>
 		</div>
 		<!--- Slide 2 --->
@@ -80,27 +78,36 @@
 <div id="course" class="offset">
 
 <div class="col-12 narrow text-center">
-	<h1>Today's topic</h1>
-	<p class="lead">Today's topic is "cultural appropriation."  Cultural appropriation, at
-times also phrased cultural misappropriation, is the adoption of an element
-or elements of one culture by members of another culture.
-
-The article talks about beauty of black female and hair braids. While white
-female feel confused when they were criticized for wearing braids or trying
-to look exotic with makeup and styles as it could offend the minority group
-who originated those culture, such as braids came from black slaves'
-working on cornfield. The author criticize Kim Kardashian for making profit
-from branding and perfecting black beauty while the black female sometimes
-feel frustrated dealing with their natural afro hair. Do you think cultural
-appropriation is guilty or is it a freedom of expression?
-
-</p>
-	<a class="btn btn-secondary btn-md" href="https://raw.githubusercontent.com/hanbba92/englishmeeting/master/img/Screenshot_20200827-193723_Medium.jpg" target="_blank">Full Article A</a>
+	<h1>Challenge</h1>
+	<p class="lead">Data Discovery for Earth Science (Devise an Earth science dataset recommender to guide users to relevant datasets for studying events such as those represented in the Earth Observatory images and descriptions)</p>
+	<a class="btn btn-secondary btn-md" href="https://2020.spaceappschallenge.org/challenges/connect/data-discovery-earth-science/details" target="_blank">Go to Challenge</a>
 </div>
 
 </div>
 <!--- End Course Section -->
+<!--- Start Project Section -->
+<div id="course" class="offset">
 
+<div class="col-12 narrow text-center">
+	<h1>Project</h1>
+	<p class="lead">The challenge here is to help researcher or any other people who is interested in topics in articles posted on Earth Observatory find possible dataset they want to look for and provide the readers with a separate dataset recommendation list on the bottom of an article. Though our service, general readers.</p>
+	<p class="lead">We develop a built-in service that NASA can implement on their Earth Observatory. When used on a webpage, it will search through the context and extracts topics and keywords that researcher would use for their research. For the searching, the program would use elasticsearch and score the keywords through tf-idf. Top 10 keywords with the most scores will be extracted from the context.</p>
+	<p class="lead">In scoring the keywords, the program would also search on other web contents such as Nature, Science news journal to collect recently raised topics and match them with the keywords generated from the Earth Observatory article. Then, the words that have the most matches get higher scores.</p>
+	<p class="lead">Then, the final list of keywords would be put into Aleph(search api) and check if there are any dataset that can be linked with the keywords. Through internal Aleph search filtering, the most relevant dataset is provided for each keywords.</p>
+	<p class="lead">The keywords would contain both link to download the dataset and description of the dataset. Moreover, if there is no dataset that matches with the keywords, these keywords would then be listed on a separate field within the article as a list of possible search recommendation.</p>
+	<p class="lead">The keywords would be included within the context as hyperlink format so if the readers click the words inside the context, they can directly visit the link to download the specific dataset. The recommendation list will be included on the bottom of the article, so readers can look into the topics on their discretion.</p>
+	</div>
+
+<div class="col-12 narrow text-center">
+	<h2>Development</h2>
+		<p class="lead">Huge amount of dataset inside NASA archive as well as EarthData webpage are not easy to handle without prior experience in earth science research. For the general citizens, they are more likely to read articles from Earth Observatory and find their interests in some topics and further develop their inquiries in NASA’s repositories. Earth Observatory is a great archive for general readers to learn and experience NASA’s project and research. Therefore, we wanted to provide more comprehensive tool for the readers on the page to help them navigate through their journey into NASA datasets.</p>
+		<p class="lead">We decided to provide bookmarklet for each article page, so readers don’t have to open any other application in order to search on research keywords provided in the article. In this way, it would be the most efficient and user-friendly way to interact with the readers.</p>
+		<p class="lead">Tools we used include Apache airflow(in order to create a pipeline that process the context on each article), Aleph(open source search engine that can filter down the most relevant dataset within NASA repositories).</p>
+		<p class="lead">There were difficulties how to implement the program inside the NASA Earth Observatory page. We don’t want to add any more pages, but integrate the recommendation list inside the existing pages. Additional front-end work should be done by web-page editors who can add our program features inside the existing web page.</p>
+	</div>
+
+</div>
+<!--- End Project Section -->
 <!--- start  of Portfolio section--->
 <div id="portfolio" class="offset">
 
