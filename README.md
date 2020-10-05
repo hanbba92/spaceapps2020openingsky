@@ -2,6 +2,6 @@
 
 # NASA SpaceApps 2020 Team Opening Sky github repo
 
-#Challenge: Connect(Data Discovery for Earth Science)
+# Challenge: Connect(Data Discovery for Earth Science)
 
-#Team: Opening Sky
+# Team: Opening Sky
