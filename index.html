@@ -93,7 +93,7 @@
 
 <div class="col-12 narrow text-center">
 	<h1>Approach</h1>
-	<p class="lead">The challenge here is to help researcher or any other people who is interested in topics in articles posted on Earth Observatory find possible dataset they want to look for and provide the readers with a separate dataset recommendation list on the bottom of an article. Though our service, general readers.</p>
+	<p class="lead">The challenge here is to help researcher or any other people who is interested in topics in articles posted on Earth Observatory find possible dataset they want to look for and provide the readers with a separate dataset recommendation list on the bottom of an article. Though our service, general readers can learn deeply about topics discussed in the articles.</p>
 	<p class="lead">We develop a built-in service that NASA can implement on their Earth Observatory. When used on a webpage, it will search through the context and extracts topics and keywords that researcher would use for their research. For the searching, the program would use elasticsearch and score the keywords through tf-idf. Top 10 keywords with the most scores will be extracted from the context.</p>
 	<p class="lead">In scoring the keywords, the program would also search on other web contents such as Nature, Science news journal to collect recently raised topics and match them with the keywords generated from the Earth Observatory article. Then, the words that have the most matches get higher scores.</p>
 	<p class="lead">Then, the final list of keywords would be put into Aleph(search api) and check if there are any dataset that can be linked with the keywords. Through internal Aleph search filtering, the most relevant dataset is provided for each keywords.</p>
